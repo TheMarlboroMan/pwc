@@ -49,6 +49,11 @@ class App_config:
 	int acc_w_fisica_pantalla() const {return token_por_ruta(CLAVE_W_FISICA_PANTALLA);}
 	int acc_h_fisica_pantalla() const {return token_por_ruta(CLAVE_H_FISICA_PANTALLA);}
 
+	input_jugador acc_izquierda() const	{return token_por_ruta_input("izquierda");}
+	input_jugador acc_derecha() const 	{return token_por_ruta_input("derecha");}
+	input_jugador acc_arriba() const 	{return token_por_ruta_input("arriba");}
+	input_jugador acc_abajo() const		{return token_por_ruta_input("abajo");}
+
 	void mut_w_logica_pantalla(int p_valor) {configurar(CLAVE_W_LOGICA_PANTALLA, p_valor);}
 	void mut_h_logica_pantalla(int p_valor) {configurar(CLAVE_H_LOGICA_PANTALLA, p_valor);}
 	void mut_w_fisica_pantalla(int p_valor) {configurar(CLAVE_W_FISICA_PANTALLA, p_valor);}
@@ -57,6 +62,12 @@ class App_config:
 	App_config();
 
 	private:
+
+	input_jugador token_por_ruta_input(const std::string& tipo) const
+	{	
+		const auto& tok=token_por_ruta("config:input:"+tipo);
+		return input_jugador{tok[0], tok[1], tok[2]};
+	}
 
 	////////////////////////////////////
 	// Definiciones...

@@ -8,6 +8,11 @@ struct Input
 {
 	enum inputs{
 escape=0,
+
+arriba,
+abajo,
+izquierda,
+derecha
 };
 
 };

@@ -26,6 +26,16 @@ void Controlador_principal::loop(DFramework::Input& input, float delta)
 		abandonar_aplicacion();
 		return;
 	}
+
+	if(input.es_input_down(Input::arriba) ||
+		input.es_input_down(Input::abajo) ||
+		input.es_input_down(Input::izquierda) ||
+		input.es_input_down(Input::derecha) ||
+		input.es_input_down(Input::escape))
+	{
+		abandonar_aplicacion();
+		return;
+	}
 }
 
 void Controlador_principal::postloop(DFramework::Input& input, float delta)
