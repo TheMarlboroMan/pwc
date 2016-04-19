@@ -1,0 +1,3 @@
+#fuente tamaño
+akashi	16
+akashi	20
