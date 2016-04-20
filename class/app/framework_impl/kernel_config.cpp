@@ -66,8 +66,7 @@ std::vector<DFramework::Par_input> Kernel_config::obtener_pares_input() const
 
 	using namespace DFramework;
 	std::vector<Par_input> res{
-		Par_input{Par_input::tipos::teclado, Input::escape, SDL_SCANCODE_ESCAPE, 0}
-};
+		Par_input{Par_input::tipos::teclado, Input::escape, SDL_SCANCODE_ESCAPE, 0}};
 
 	std::map<int, App_config::input_jugador> mapa;
 	obtener_info_jugador(mapa, Input::izquierda, Input::derecha, Input::arriba, Input::abajo);
