@@ -15,10 +15,10 @@
 //Declaración del log de aplicación en espacio global.
 DLibH::Log_base LOG;
 
-int iniciar_app(Herramientas_proyecto::Controlador_argumentos&);
-
 int main(int argc, char ** argv)
 {
+	using namespace App;
+
 	//Inicializar control de logs.
 	LOG.inicializar("logs/global.log");
 	LOG.activar();
@@ -26,15 +26,6 @@ int main(int argc, char ** argv)
 
 	//Inicializar control de argumentos.
 	Herramientas_proyecto::Controlador_argumentos CARG(argc, argv);
-
-	bool res=iniciar_app(CARG);
-	DLibH::Log_motor::finalizar();
-	return res;
-}
-
-int iniciar_app(Herramientas_proyecto::Controlador_argumentos& CARG)
-{
-	using namespace App;
 
 	DLibH::Log_base log_app("logs/app.log");
 	log_app<<"Iniciando proceso principal..."<<std::endl;
@@ -74,11 +65,13 @@ int iniciar_app(Herramientas_proyecto::Controlador_argumentos& CARG)
 
 		log_app<<"Finalizando SDL2..."<<std::endl;
 		DLibH::Herramientas_SDL::apagar_SDL();
+		DLibH::Log_motor::finalizar();
 
 		return 1;
 	}
 
 	log_app<<"Finalizando SDL2..."<<std::endl;
 	DLibH::Herramientas_SDL::apagar_SDL();
+	DLibH::Log_motor::finalizar();
 	return 0;
 }
