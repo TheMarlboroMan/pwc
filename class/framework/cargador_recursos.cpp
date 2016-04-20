@@ -77,7 +77,7 @@ void Cargador_recursos::procesar_entrada_textura(const std::vector<std::string>&
 		std::string ruta=valores[1];
 		unsigned int transparencia=std::atoi(valores[2].c_str());
 
-		SDL_Surface * superficie=DLibV::Utilidades_graficas_SDL::cargar_imagen(ruta.c_str(), pantalla->acc_ventana());
+		SDL_Surface * superficie=transparencia ? DLibV::Utilidades_graficas_SDL::cargar_imagen(ruta.c_str(), pantalla->acc_ventana()) : DLibV::Utilidades_graficas_SDL::cargar_imagen(ruta.c_str(), nullptr);
 
 		if(!superficie)
 		{

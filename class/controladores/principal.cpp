@@ -66,6 +66,12 @@ void Controlador_principal::dibujar(DLibV::Pantalla& pantalla)
 	bmp.establecer_recorte(f.como_sdl_rect());
 	bmp.establecer_posicion(100, 100, f.w, f.h);
 	bmp.volcar(pantalla);
+
+	DLibV::Representacion_bitmap bmp2(DLibV::Gestor_texturas::obtener(g_lens_flare));
+	bmp2.establecer_modo_blend(DLibV::Representacion::BLEND_ALPHA);
+	bmp2.establecer_alpha(128);
+	bmp2.ir_a(100, 100);
+	bmp2.volcar(pantalla);
 }
 
 void  Controlador_principal::despertar()

@@ -4,7 +4,8 @@
 namespace App
 {
 enum grecursos {
-g_sprites=1
+g_sprites=1,
+g_lens_flare=2
 };
 }
 
