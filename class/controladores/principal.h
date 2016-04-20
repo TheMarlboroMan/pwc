@@ -1,11 +1,12 @@
 #ifndef CONTROLADOR_PRINCIPAL_H
 #define CONTROLADOR_PRINCIPAL_H
 
+#include <class/gestor_fuentes_ttf.h>
+
 #include "estados_controladores.h"
 #include "../framework/controlador_interface.h"
 #include "../app/framework_impl/input.h"
 
-#include "../app/fuentes.h"
 #include "../app/localizador.h"
 #include "../app/sistema_audio.h"
 
@@ -18,7 +19,7 @@ class Controlador_principal:
 {
 	public:
 
-						Controlador_principal(DLibH::Log_base&, const Fuentes&, const Localizador&, Sistema_audio&);
+						Controlador_principal(DLibH::Log_base&, const Herramientas_proyecto::Gestor_fuentes_TTF&, const Localizador&, Sistema_audio&);
 
 	virtual void 				preloop(DFramework::Input& input, float delta);
 	virtual void 				loop(DFramework::Input& input, float delta);
@@ -33,6 +34,7 @@ class Controlador_principal:
 	DLibH::Log_base&			log;
 	const Localizador&			localizador;
 	Sistema_audio&				sistema_audio;
+	const DLibV::Fuente_TTF&		fuente;
 };
 
 }

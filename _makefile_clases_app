@@ -26,11 +26,6 @@ $(DIR_CLASES_IMPLEMENTACION_FRAMEWORK)app_config.cpp
 #Clases...
 ################################################################################
 
-$(DIR_O)fuentes.o:\
-$(DIR_CLASES_APP)fuentes.h \
-$(DIR_CLASES_APP)fuentes.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) $(DIR_CLASES_APP)fuentes.cpp -o $(DIR_O)fuentes.o
-
 $(DIR_O)localizador.o:\
 $(DIR_CLASES_APP)localizador.h \
 $(DIR_CLASES_APP)localizador.cpp

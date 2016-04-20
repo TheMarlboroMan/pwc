@@ -7,10 +7,11 @@
 
 using namespace App;
 
-Controlador_principal::Controlador_principal(DLibH::Log_base& log, const Fuentes& f, const Localizador& l, Sistema_audio& sa)
+Controlador_principal::Controlador_principal(DLibH::Log_base& log, const Herramientas_proyecto::Gestor_fuentes_TTF& f, const Localizador& l, Sistema_audio& sa)
 	:log(log),
 	localizador(l),
-	sistema_audio(sa)
+	sistema_audio(sa),
+	fuente(f.obtener_fuente("akashi", 20))
 {
 }
 
@@ -46,6 +47,10 @@ void Controlador_principal::postloop(DFramework::Input& input, float delta)
 void Controlador_principal::dibujar(DLibV::Pantalla& pantalla)
 {
 	pantalla.limpiar(0, 64, 0, 255);
+
+	DLibV::Representacion_TTF ttf(fuente, {255, 255, 255, 255}, "LOL");
+	ttf.ir_a(20, 20);
+	ttf.volcar(pantalla);
 }
 
 

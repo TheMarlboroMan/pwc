@@ -80,13 +80,13 @@ void Director_estados::registrar_fuentes()
 	for(const auto& l : v)
 	{
 		auto p=DLibH::Herramientas::explotar(l, '\t');
-		if(p.size()!=2)
+		if(p.size()!=3)
 		{
 			throw std::runtime_error("Error al parsear fichero de fuentes");
 		}
 		else
 		{
-			fuentes.registrar_fuente(p[0], std::atoi( p[1].c_str() ) );
+			fuentes.registrar_fuente(p[0], std::atoi( p[1].c_str() ), p[2] );
 		}
 	}	
 }

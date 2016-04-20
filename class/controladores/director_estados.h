@@ -4,6 +4,7 @@
 #include <memory>
 
 #include <herramientas/log_base/log_base.h>
+#include <class/gestor_fuentes_ttf.h>
 
 #include "../framework/director_estados_interface.h"
 
@@ -39,7 +40,7 @@ class Director_estados:
 	DLibH::Log_base&				log;
 
 	Sistema_audio					sistema_audio;
-	Fuentes						fuentes;
+	Herramientas_proyecto::Gestor_fuentes_TTF	fuentes;
 	Localizador 					localizador;
 	
 	std::unique_ptr<Controlador_principal>		controlador_principal;

@@ -6,16 +6,12 @@ $(DIR_O_HERRAMIENTAS_PROYECTO)string_utilidades.o \
 $(DIR_O_HERRAMIENTAS_PROYECTO)ficheros_utilidades.o \
 $(DIR_O_HERRAMIENTAS_PROYECTO)dnot_parser.o \
 $(DIR_O_HERRAMIENTAS_PROYECTO)dnot_token.o \
-$(DIR_O_HERRAMIENTAS_PROYECTO)localizador_base.o \
-$(DIR_O_HERRAMIENTAS_PROYECTO)compositor_vista.o \
-$(DIR_O_HERRAMIENTAS_PROYECTO)listado_vertical.o\
-$(DIR_O_HERRAMIENTAS_PROYECTO)estructura_paginacion.o\
-$(DIR_O_HERRAMIENTAS_PROYECTO)generador_numeros.o \
+$(DIR_O_HERRAMIENTAS_PROYECTO)gestor_fuentes_ttf.o \
+$(DIR_O_HERRAMIENTAS_PROYECTO)localizador_base.o 
 
 DEP_CLASES_APP=\
 $(DIR_O)kernel_config.o\
 $(DIR_O)app_config.o\
-$(DIR_O)fuentes.o\
 $(DIR_O)localizador.o\
 $(DIR_O)audio_reproducir.o\
 $(DIR_O)audio_detener.o\
