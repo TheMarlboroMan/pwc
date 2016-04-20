@@ -60,9 +60,9 @@ void Controlador_principal::dibujar(DLibV::Pantalla& pantalla)
 	auto f=ta.obtener(3).obtener(0).frame;
 	
 	DLibV::Representacion_bitmap bmp(DLibV::Gestor_texturas::obtener(g_sprites));
-	bmp.establecer_alpha(255);
 	bmp.establecer_modo_blend(DLibV::Representacion::BLEND_ALPHA);
-	bmp.establecer_mod_color(255, 255, 255);
+	bmp.establecer_alpha(128);
+//	bmp.establecer_mod_color(255, 255, 255);
 	bmp.establecer_recorte(f.como_sdl_rect());
 	bmp.establecer_posicion(100, 100, f.w, f.h);
 	bmp.volcar(pantalla);
