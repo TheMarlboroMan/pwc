@@ -1,12 +1,13 @@
 #ifndef CONTROLADOR_PRINCIPAL_H
 #define CONTROLADOR_PRINCIPAL_H
 
-#include <class/gestor_fuentes_ttf.h>
-
+//Dependencias...
 #include "estados_controladores.h"
 #include "../framework/controlador_interface.h"
-#include "../app/framework_impl/input.h"
 
+
+//Específicos de la aplicación...
+#include <class/gestor_fuentes_ttf.h>
 #include "../app/localizador.h"
 #include "../app/sistema_audio.h"
 

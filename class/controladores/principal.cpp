@@ -1,9 +1,7 @@
 #include "principal.h"
 
-#ifdef WINCOMPIL
-/* Localización del parche mingw32... Esto debería estar en otro lado, supongo. */
-#include <herramientas/herramientas/herramientas.h>
-#endif
+#include "../app/framework_impl/input.h"
+#include <templates/parches_compat.h>
 
 using namespace App;
 
@@ -48,11 +46,12 @@ void Controlador_principal::dibujar(DLibV::Pantalla& pantalla)
 {
 	pantalla.limpiar(0, 64, 0, 255);
 
-	DLibV::Representacion_TTF ttf(fuente, {255, 255, 255, 255}, "LOL");
+	
+
+	DLibV::Representacion_TTF ttf(fuente, {255, 255, 255, 255}, "LOL"+compat::to_string(33) );
 	ttf.ir_a(20, 20);
 	ttf.volcar(pantalla);
 }
-
 
 void  Controlador_principal::despertar()
 {

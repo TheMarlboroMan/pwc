@@ -3,17 +3,18 @@
 
 #include <memory>
 
-#include <herramientas/log_base/log_base.h>
-#include <class/gestor_fuentes_ttf.h>
-
 #include "../framework/director_estados_interface.h"
-
 #include "../app/framework_impl/app_config.h"
-#include "../app/localizador.h"
-#include "../app/sistema_audio.h"
 
+//Estados y controladores.
 #include "estados_controladores.h"
 #include "principal.h"
+
+//Específicos de la aplicación.
+#include <herramientas/log_base/log_base.h>
+#include <class/gestor_fuentes_ttf.h>
+#include "../app/localizador.h"
+#include "../app/sistema_audio.h"
 
 namespace App
 {
